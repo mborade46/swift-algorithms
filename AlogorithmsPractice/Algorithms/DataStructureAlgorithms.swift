@@ -310,7 +310,17 @@ func findPrefixInTwoString(str1:String,str2: String) -> String{
         
     }
     
-    
+    func medianOfTwoArray(numbers1:[Int],numbers2:[Int]) -> Float {
+        var mergedNumbers = numbers1 + numbers2
+        mergedNumbers = mergedNumbers.sorted(by: <)
+        if mergedNumbers.count % 2 == 0  {
+            return Float(mergedNumbers[(mergedNumbers.count/2)] + mergedNumbers[(mergedNumbers.count/2) - 1]) / 2
+        }
+        else{
+            
+            return Float(mergedNumbers[(mergedNumbers.count - 1) / 2])
+        }
+    }
    
 }
         
